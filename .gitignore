@@ -26,18 +26,6 @@
 #*.obj
 #
 
-# Default Delphi compiler directories
-# Content of this directories are generated with each Compile/Construct of a project.
-# Most of the time, files here have not there place in a code repository.
-#Win32/
-#Win64/
-#OSX64/
-#OSXARM64/
-#Android/
-#Android64/
-#iOSDevice64/
-#Linux64/
-
 # Delphi compiler-generated binaries (safe to delete)
 *.exe
 *.dll
@@ -79,3 +67,37 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+
+# Lazarus
+backup/
+lib/
+**/units
+**/*.ppu
+**/*.o
+**/*.bak
+**/*.exe
+**/*.or
+**/*.compiled
+**/*.dbg
+**/backup
+**/*.lrs
+**/*.lps
+examples/console/*/*.lpi
+
+examples/console/lftp/lftpclient
+examples/console/lhttp/fpget
+examples/console/lhttp/fphttpd
+examples/console/lsmtp/lsmtpclient
+examples/console/ltcp/lclient
+examples/console/ltcp/lserver
+examples/console/ltelnet/ltclient
+examples/console/ludp/ludp
+
+examples/visual/http/httpclienttest
+examples/visual/telnet/telnet
+examples/visual/ftp/ftptest
+examples/visual/ftp/log.txt
+examples/visual/smtp/smtptest
+examples/visual/tcpudp/testnet
+
+lazarus
