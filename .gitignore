@@ -101,3 +101,6 @@ examples/visual/smtp/smtptest
 examples/visual/tcpudp/testnet
 
 lazarus
+
+# MacOS
+.DS_Store
