@@ -12,10 +12,12 @@ Instructions:
 
 0) Compile with FPC 3.2.2 or FPC 3.3.1
 1) Download a ZIP file and unzip
-2) cd to the lnet-master directory
+2) cd to the `lnet-master` directory
 3) run make (this compiles the library and console examples - there are no Cocoa/Carbon hooks for the visual components, so they do not compile for macOS)
 4) For Lazarus, add the path to lnet-master/lib to the Project Options > Paths - "Other unit files" OR
-5) For FPC, use -Fu to add the path to lnet-master/lib
+5) For FPC, use `-Fu` to add the path to `lnet-master/lib`
+
+---
 
 # Original ReadMe Content
 
