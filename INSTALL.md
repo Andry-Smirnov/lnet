@@ -16,7 +16,7 @@ Possible options are:
 
 ## Usage
 
-If you're using Lazarus, see lazaruspackage/INSTALL, even if you plan to use only non-visual aspect of lNet (eg: not depend on LCL). Otherwise if you want to use lnet in your project, just copy the `lib` directory somewhere and put it in compiler's unit search path with `-Fu` and `-Fi` for the `lib/sys` subdir.
+If you're using Lazarus, see lazaruspackage/INSTALL, even if you plan to use only non-visual aspect of lNet (eg: not depend on LCL). Otherwise if you want to use lnet in your project, just copy the `src` directory somewhere and put it in compiler's unit search path with `-Fu` and `-Fi` for the `src/sys` subdir.
 
 ## Units
 
@@ -30,8 +30,8 @@ If you're using Lazarus, see lazaruspackage/INSTALL, even if you plan to use onl
 ### Layout
 
 - `lnet/` - this root dir
-- `lnet/lib` - the library dir for all lnet libraries
-- `lnet/lib/sys` - system specific units and include files for lnet libraries
+- `lnet/src` - the library dir for all lnet libraries
+- `lnet/src/sys` - system specific units and include files for lnet libraries
 - `lnet/examples` - console and visual example programs
 
 The console example programs get compiled if you type `make`.
