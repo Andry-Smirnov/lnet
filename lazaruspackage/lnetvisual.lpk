@@ -1,10 +1,12 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Package Version="3">
+  <Package Version="5">
     <Name Value="lnetvisual"/>
+    <Type Value="RunAndDesignTime"/>
+    <AddToProjectUsesSection Value="True"/>
     <Author Value="Aleš Katona, Micha Nelissen"/>
     <CompilerOptions>
-      <Version Value="10"/>
+      <Version Value="11"/>
       <SearchPaths>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
@@ -22,20 +24,15 @@
       </CodeGeneration>
       <Linking>
         <Debugging>
-          <GenerateDebugInfo Value="True"/>
+          <DebugInfoType Value="dsStabs"/>
         </Debugging>
       </Linking>
       <Other>
         <Verbosity>
           <ShowNotes Value="False"/>
           <ShowHints Value="False"/>
-          <ShowGenInfo Value="False"/>
         </Verbosity>
-        <CompilerMessages>
-          <UseMsgFile Value="True"/>
-        </CompilerMessages>
         <CustomOptions Value="-dLNET_VISUAL"/>
-        <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
     <Description Value="Lightweight Networking Library, or lNet is a networking suite integrated with Lazarus to provide simple and effective means to use TCP, UDP, FTP, SMTP, Telnet and HTTP protocols over the net.
@@ -53,28 +50,28 @@
         <UnitName Value="lNetComponents"/>
       </Item2>
       <Item3>
-        <Filename Value="lnetvisualreg.lrs"/>
-        <Type Value="LRS"/>
-      </Item3>
-      <Item4>
         <Filename Value="lnetvisualreg.pas"/>
         <HasRegisterProc Value="True"/>
         <UnitName Value="LNetVisualReg"/>
+      </Item3>
+      <Item4>
+        <Filename Value="lclgtkeventer.inc"/>
+        <Type Value="Include"/>
       </Item4>
       <Item5>
-        <Filename Value="lclgtkeventer.inc"/>
+        <Filename Value="lclwinceeventer.inc"/>
         <Type Value="Include"/>
       </Item5>
       <Item6>
-        <Filename Value="lclwinceeventer.inc"/>
+        <Filename Value="lclwineventer.inc"/>
         <Type Value="Include"/>
       </Item6>
       <Item7>
-        <Filename Value="lclwineventer.inc"/>
-        <Type Value="Include"/>
+        <Filename Value="lnetvisualreg.lrs"/>
+        <Type Value="LRS"/>
       </Item7>
     </Files>
-    <Type Value="RunAndDesignTime"/>
+    <CompatibilityMode Value="True"/>
     <RequiredPkgs Count="3">
       <Item1>
         <PackageName Value="IDEIntf"/>
@@ -92,7 +89,6 @@
     </UsageOptions>
     <PublishOptions>
       <Version Value="2"/>
-      <IgnoreBinaries Value="False"/>
     </PublishOptions>
   </Package>
 </CONFIG>
