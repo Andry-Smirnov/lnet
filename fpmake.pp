@@ -34,7 +34,7 @@ begin
       P.Options.add('-Sm');
 {$ENDIF VER2_4_0}
 {$IFDEF VER2_6}
-      P.Options.Add('-Filib/sys');
+      P.Options.Add('-Fisrc/sys');
 {$ENDIF}
       P.SupportBuildModes := [bmOneByOne];
 
@@ -48,59 +48,59 @@ begin
       p.Dependencies.Add('winunits-jedi', [win32, win64]);
   //    P.NeedLibC:= true;  // true for headers that indirectly link to libc?
 
-      T:=P.Targets.AddUnit('lib/lws2tcpip.pp', AllOSes - AllUnixOSes);
-      T:=P.Targets.AddUnit('lib/lws2override.pp', AllOSes - AllUnixOSes);
-      T:=P.Targets.AddUnit('lib/lcommon.pp');
+      T:=P.Targets.AddUnit('src/lws2tcpip.pp', AllOSes - AllUnixOSes);
+      T:=P.Targets.AddUnit('src/lws2override.pp', AllOSes - AllUnixOSes);
+      T:=P.Targets.AddUnit('src/lcommon.pp');
       with T.Dependencies do
         begin
         AddUnit('lws2override', AllOSes - AllUnixOSes);
         AddUnit('lws2tcpip', AllOSes - AllUnixOSes);
-        AddInclude('lib/sys/osunits.inc');
+        AddInclude('src/sys/osunits.inc');
         end;
-      T := P.Targets.AddUnit('lib/levents.pp');
+      T := P.Targets.AddUnit('src/levents.pp');
       with T.Dependencies do
         begin
-          AddInclude('lib/sys/lkqueueeventerh.inc');
-          AddInclude('lib/sys/lepolleventerh.inc');
-          AddInclude('lib/sys/lkqueueeventer.inc');
-          AddInclude('lib/sys/lepolleventer.inc');
+          AddInclude('src/sys/lkqueueeventerh.inc');
+          AddInclude('src/sys/lepolleventerh.inc');
+          AddInclude('src/sys/lkqueueeventer.inc');
+          AddInclude('src/sys/lepolleventer.inc');
         end;
-      T := P.Targets.AddUnit('lib/lcontrolstack.pp');
-      T := P.Targets.AddUnit('lib/lmimetypes.pp');
-      T := P.Targets.AddUnit('lib/lmimestreams.pp');
-      T := P.Targets.AddUnit('lib/lmimewrapper.pp');
-      T := P.Targets.AddUnit('lib/lprocess.pp');
-      T := P.Targets.AddUnit('lib/lspawnfcgi.pp');
+      T := P.Targets.AddUnit('src/lcontrolstack.pp');
+      T := P.Targets.AddUnit('src/lmimetypes.pp');
+      T := P.Targets.AddUnit('src/lmimestreams.pp');
+      T := P.Targets.AddUnit('src/lmimewrapper.pp');
+      T := P.Targets.AddUnit('src/lprocess.pp');
+      T := P.Targets.AddUnit('src/lspawnfcgi.pp');
       with T.Dependencies do
         begin
-          AddInclude('lib/sys/lspawnfcgiunix.inc', AllUnixOSes);
-          AddInclude('lib/sys/lspawnfcgiwin.inc', AllOSes - AllUnixOSes);
+          AddInclude('src/sys/lspawnfcgiunix.inc', AllUnixOSes);
+          AddInclude('src/sys/lspawnfcgiwin.inc', AllOSes - AllUnixOSes);
         end;
-      T := P.Targets.AddUnit('lib/lfastcgi.pp');
-      T := P.Targets.AddUnit('lib/lstrbuffer.pp');
-      T := P.Targets.AddUnit('lib/lthreadevents.pp');
-      T := P.Targets.AddUnit('lib/ltimer.pp');
-      T := P.Targets.AddUnit('lib/lwebserver.pp');
+      T := P.Targets.AddUnit('src/lfastcgi.pp');
+      T := P.Targets.AddUnit('src/lstrbuffer.pp');
+      T := P.Targets.AddUnit('src/lthreadevents.pp');
+      T := P.Targets.AddUnit('src/ltimer.pp');
+      T := P.Targets.AddUnit('src/lwebserver.pp');
 {$IFNDEF VER3}
-      T := P.Targets.AddUnit('lib/lopenssl.pas');
+      T := P.Targets.AddUnit('src/lopenssl.pas');
 {$ELSE}
       // Archives created with fpc version 3 should also contain this file
       // to be able to compile on earlier versions.
-      P.Sources.AddSrc('lib/lopenssl.pas');
+      P.Sources.AddSrc('src/lopenssl.pas');
 {$ENDIF ver3}
-      T:=P.Targets.AddUnit('lib/lnet.pp');
-      T:=P.Targets.AddUnit('lib/lnetssl.pp');
-      T:=P.Targets.AddUnit('lib/ltelnet.pp');
-      T:=P.Targets.AddUnit('lib/lftp.pp');
+      T:=P.Targets.AddUnit('src/lnet.pp');
+      T:=P.Targets.AddUnit('src/lnetssl.pp');
+      T:=P.Targets.AddUnit('src/ltelnet.pp');
+      T:=P.Targets.AddUnit('src/lftp.pp');
     with T.Dependencies do
       begin
-        AddInclude('lib/lcontainers.inc');
-        AddInclude('lib/lcontainersh.inc');
+        AddInclude('src/lcontainers.inc');
+        AddInclude('src/lcontainersh.inc');
       end;
-      T := P.Targets.AddUnit('lib/lsmtp.pp');
-      T := P.Targets.AddUnit('lib/lhttp.pp');
-      T := P.Targets.AddUnit('lib/lhttputil.pp');
-      T := P.Targets.AddUnit('lib/fastcgi_base.pp');
+      T := P.Targets.AddUnit('src/lsmtp.pp');
+      T := P.Targets.AddUnit('src/lhttp.pp');
+      T := P.Targets.AddUnit('src/lhttputil.pp');
+      T := P.Targets.AddUnit('src/fastcgi_base.pp');
 
       T := P.Targets.AddExampleProgram('examples/console/ltelnet/ltclient.pp');
       T := P.Targets.AddExampleProgram('examples/console/lftp/lftpclient.pp');
