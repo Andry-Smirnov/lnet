@@ -14,8 +14,8 @@ Instructions:
 1) Download a ZIP file and unzip
 2) cd to the `lnet-master` directory
 3) run make (this compiles the library and console examples - there are no Cocoa/Carbon hooks for the visual components, so they do not compile for macOS)
-4) For Lazarus, add the path to lnet-master/lib to the Project Options > Paths - "Other unit files" OR
-5) For FPC, use `-Fu` to add the path to `lnet-master/lib`
+4) For Lazarus, add the path to lnet-master/src to the Project Options > Paths - "Other unit files" OR
+5) For FPC, use `-Fu` to add the path to `lnet-master/src`
 
 ---
 
@@ -36,7 +36,7 @@ lNet as of version 0.6+ uses OpenSSL when SSLSession is used.
 
 ## LICENSING
 
-lNet units (units in lib and lazaruspackage directories) are licensed under a modified LGPL license. See file [lib/LICENSE](lib/LICENSE) and [lib/LICENSE.ADDON](lib/LICENSE.ADDON).
+lNet units (units in src and lazaruspackage directories) are licensed under a modified LGPL license. See file [src/LICENSE](src/LICENSE) and [src/LICENSE.ADDON](src/LICENSE.ADDON).
 
 The modification allows to static/smart - link lNet libraries into binary applications without providing sources.
 
