@@ -7,8 +7,8 @@ argless:
 
 clean:
 	delp .
-	delp lib
-	delp lib/sys
+	delp src
+	delp src/sys
 	delp examples/console/units
 	$(MAKE) -C examples clean
 	rm -f *~
