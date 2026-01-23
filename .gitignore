@@ -80,7 +80,7 @@ lib/
 **/*.compiled
 **/*.dbg
 **/backup
-**/*.lrs
+#**/*.lrs
 **/*.lps
 examples/console/*/*.lpi
 
