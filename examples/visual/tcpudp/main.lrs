@@ -56,7 +56,5 @@ LazarusResources.Add('TFormMain','FORMDATA',[
   +'ick'#0#0#0#9'TMenuItem'#12'MenuItemHelp'#7'Caption'#6#5'&Help'#0#9'TMenuIte'
   +'m'#13'MenuItemAbout'#7'Caption'#6#6'&About'#7'OnClick'#7#18'MenuItemAboutCl'
   +'ick'#0#0#0#0#21'TLSSLSessionComponent'#3'SSL'#6'CAFile'#6#4'cert'#7'KeyFile'
-  +#6#4'pkey'#6'Method'#7#8'msSslTLS'#9'SSLActive'#8#0#0#6'TTimer'#9'TimerQuit'
-  +#7'Enabled'#8#8'Interval'#3#200#0#7'OnTimer'#7#14'TimerQuitTimer'#4'left'#3
-  +'X'#1#3'top'#2'_'#0#0#0
+
 ]);
