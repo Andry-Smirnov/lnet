@@ -1,3 +1,5 @@
+{ This is an automatically generated lazarus resource file }
+
 LazarusResources.Add('TFormMain','FORMDATA',[
   'TPF0'#9'TFormMain'#8'FormMain'#4'Left'#3'F'#2#6'Height'#3#195#1#3'Top'#3'L'#1
   +#5'Width'#3#134#1#13'ActiveControl'#7#8'EditPort'#7'Caption'#6#19'lNet Compo'
@@ -56,5 +58,7 @@ LazarusResources.Add('TFormMain','FORMDATA',[
   +'ick'#0#0#0#9'TMenuItem'#12'MenuItemHelp'#7'Caption'#6#5'&Help'#0#9'TMenuIte'
   +'m'#13'MenuItemAbout'#7'Caption'#6#6'&About'#7'OnClick'#7#18'MenuItemAboutCl'
   +'ick'#0#0#0#0#21'TLSSLSessionComponent'#3'SSL'#6'CAFile'#6#4'cert'#7'KeyFile'
-
+  +#6#4'pkey'#6'Method'#7#8'msSslTLS'#9'SSLActive'#8#4'left'#3'X'#1#3'top'#3#144
+  +#0#0#0#6'TTimer'#9'TimerQuit'#7'Enabled'#8#8'Interval'#3#200#0#7'OnTimer'#7
+  +#14'TimerQuitTimer'#4'left'#3'X'#1#3'top'#2'_'#0#0#0
 ]);
